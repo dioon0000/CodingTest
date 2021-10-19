@@ -1,4 +1,4 @@
-//BackTracking PS
+//BackTracking PS (순열)
 #include <iostream>
 #define MAX 9
 using namespace std;
