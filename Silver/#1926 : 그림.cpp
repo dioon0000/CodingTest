@@ -52,6 +52,6 @@ int main() {
 			}
 		}
 
-	cout << cnt << '\n' << mx;
+	cout << cnt << '\n' << mx; 
 	return 0;
 }
