@@ -1,3 +1,4 @@
+//https://www.acmicpc.net/problem/1030
 #include <bits/stdc++.h>
 #define WHITE 0
 #define BLACK 1
