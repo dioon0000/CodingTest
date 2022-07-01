@@ -24,3 +24,24 @@ int main(){
 	}
 	return 0;
 }
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+
+	int n, val = 1;
+	cin >> n;
+
+	for (int i = 0; i <= 30; i++) {
+		if (n == val) {
+			cout << 1;
+			return 0;
+		}
+		val <<= 1;
+	}
+	cout << 0;
+}
+*/
