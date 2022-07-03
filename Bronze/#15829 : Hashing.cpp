@@ -15,4 +15,4 @@ int main() {
 	}
 	cout << hash;
 	return 0;
-}
+} 
