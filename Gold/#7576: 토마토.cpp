@@ -1,3 +1,4 @@
+//https://www.acmicpc.net/problem/7576
 #include <bits/stdc++.h>
 #define X first
 #define Y second
