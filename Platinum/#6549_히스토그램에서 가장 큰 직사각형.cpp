@@ -1,3 +1,4 @@
+ï»¿//https://www.acmicpc.net/problem/6549
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,7 +32,7 @@ int main(){
 
 			cout << ans << '\n';
 
-			//¹è¿­°ú ½ºÅÃ ÃÊ±âÈ­
+			//ë°°ì—´ê³¼ ìŠ¤íƒ ì´ˆê¸°í™”
 			memset(h, 0, sizeof(h));
 			while(!s.empty())
 				s.pop();
