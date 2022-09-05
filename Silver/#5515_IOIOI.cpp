@@ -1,4 +1,5 @@
-﻿#include <iostream>
+//https://www.acmicpc.net/problem/5525
+#include <iostream>
 #include <string>
 
 using namespace std;
