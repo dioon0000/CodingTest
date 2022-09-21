@@ -1,4 +1,5 @@
-﻿#include <bits/stdc++.h>
+//https://www.acmicpc.net/problem/10451
+#include <bits/stdc++.h>
 #define MAX 1005
 using namespace std;
 
