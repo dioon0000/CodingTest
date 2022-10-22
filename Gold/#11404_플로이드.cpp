@@ -1,10 +1,13 @@
-﻿#include <bits/stdc++.h>
+﻿//https://www.acmicpc.net/problem/11404
+#include <bits/stdc++.h>
 #define MAX 105
 using namespace std;
 
 int distant[MAX][MAX];
 int n, m;
 
+
+//플로이드 워셜 O(N^3)
 void floydWarshal(){
 	for(int x=1; x<=n; ++x)
 		distant[x][x] = 0;
