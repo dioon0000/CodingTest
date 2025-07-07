@@ -1,17 +1,22 @@
-#include <string>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-string solution(vector<string> seoul) {
-    int cnt=0;
-    string s_cnt;
+string solution(vector<string> seoul){
+    string answer = "";
+    int idx = 0;
+
     for(int i=0; i<seoul.size(); ++i){
-        if(seoul[i] == "Kim")
+        if(seoul[i] == "Kim") {
+            idx = i;
             break;
-        else    cnt++;
+        }
     }
-    s_cnt = to_string(cnt);
-    string answer = "김서방은 " +s_cnt + "에 있다";
+
+    answer = "김서방은 "+to_string(idx)+"에 있다";
+    cout << answer;
     return answer;
+}
+int main(){
+    solution({ "Jane", "Kim" });
+    return 0;
 }
