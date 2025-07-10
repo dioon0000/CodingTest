@@ -1,16 +1,21 @@
-#include <string>
-#include <vector>
-
+#include <iostream>
 using namespace std;
 
 bool solution(int x) {
-    bool answer = true;
-    int sum=0, tmp=x;
-    while(tmp){
-        sum+=tmp%10;
-        tmp/=10;
-    }
-    if(x%sum!=0)
-        answer=false;
-    return answer;
+	int sum = 0;
+	int val = x;
+	while(val >= 10) {
+		sum+=val%10;
+		val/=10;
+	}
+	sum+=val;
+	if(x%sum==0)
+		return true;
+	else
+		return false;
+}
+
+int main() {
+	solution(12);
+	return 0;
 }
