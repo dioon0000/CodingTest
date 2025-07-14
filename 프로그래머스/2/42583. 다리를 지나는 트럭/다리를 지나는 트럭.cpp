@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <queue>
 using namespace std;
 
 int solution(int bridge_length, int weight, vector<int> truck_weights) {
@@ -36,7 +37,6 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
             }
         }
     }
-    cout << answer;
     return answer;
 }
 
