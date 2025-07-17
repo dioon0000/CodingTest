@@ -28,13 +28,19 @@ int solution(string numbers) {
         string str;
         for(int i=0; i<numbers.size(); ++i) {
             str+=numbers[i];
-
-            if(isPrime(stoi(str)))
-                Piece.insert(stoi(str));
+            Piece.insert(stoi(str));
         }
     } while(next_permutation(numbers.begin(), numbers.end()));
 
-    answer = Piece.size();
+    for(int num : Piece) {
+        if(isPrime(num))
+            answer++;
+    }
     cout << answer;
     return answer;
+}
+
+int main() {
+    solution("17");
+    return 0;
 }
