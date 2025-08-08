@@ -30,12 +30,5 @@ int solution(int storey) {
 
 		storey/=10;
 	}
-
-	cout << answer;
 	return answer;
-}
-
-int main() {
-	solution(5555);
-	return 0;
 }
