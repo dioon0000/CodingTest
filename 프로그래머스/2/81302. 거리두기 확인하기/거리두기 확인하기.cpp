@@ -57,22 +57,23 @@ bool check(vector<string> place)
 						{
 							if(k == 4) // 왼쪽 위 대각선
 							{
-								if(place[i-1][j] != 'X' || place[i][j-1] != 'X')
+								// info 상하좌우 저장
+								if(info[0] != 'X' || info[2] != 'X')
 									return false;
 							}
 							else if(k == 5) // 오른쪽 위 대각선
 							{
-								if(place[i-1][j] != 'X' || place[i][j+1] != 'X')
+								if(info[0] != 'X' || info[3] != 'X')
 									return false;
 							}
 							else if(k == 6) // 왼쪽 아래 대각선
 							{
-								if(place[i+1][j] != 'X' || place[i][j-1] != 'X')
+								if(info[1] != 'X' || info[2] != 'X')
 									return false;
 							}
 							else if(k == 7) // 오른쪽 아래 대각선
 							{
-								if(place[i+1][j] != 'X' || place[i][j+1] != 'X')
+								if(info[1] != 'X' || info[3] != 'X')
 									return false;
 							}
 						}
