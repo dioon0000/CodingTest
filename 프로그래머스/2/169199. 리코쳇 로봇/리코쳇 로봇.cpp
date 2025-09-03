@@ -8,6 +8,7 @@ int dx[4] = {0, 0, -1, 1};
 int BFS(const vector<string>& board) {
     int row = board.size(), col = board[0].length(), cnt=0;
     int srow = 0, scol = 0, erow = 0, ecol = 0;
+    bool bNextToWall = false, bNextToObstacle = false;
     vector<vector<bool>> visit(row, vector<bool>(col, false));
     queue<tuple<int, int, int>> q;
 
@@ -17,6 +18,24 @@ int BFS(const vector<string>& board) {
             if(board[i][j] == 'R') { srow = i, scol = j; }
             if(board[i][j] == 'G') { erow = i, ecol = j; }
         }
+    }
+
+     //G의 상하좌우가 벽이 아니거나 D가 없다면 도달 불가이므로 -1 리턴
+    for(int i=0; i<4; ++i) {
+        int ny = erow + dy[i];
+        int nx = ecol + dx[i];
+
+        if(ny<0 || nx<0 || ny>=row || nx>=col) {
+            bNextToWall = true;
+            break;
+        }
+        if(board[ny][nx] == 'D') {
+            bNextToObstacle = true;
+        }
+    }
+
+    if(!(bNextToObstacle || bNextToWall)) {
+        return -1;
     }
 
     q.push({ srow, scol, 0 });
